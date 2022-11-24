@@ -17,7 +17,8 @@
     />
     <link rel="stylesheet" href="/styles/common.css" />
     <link rel="stylesheet" href="/styles/subjects.css" />
-    <title>Courses - Sodiq Academy</title>
+    <link rel="stylesheet" href="/styles/form.css" />
+    <title>Enroll - Sodiq Academy</title>
   </head>
 
   <body>
@@ -38,9 +39,11 @@
           </div>
           <ul class="navbar_list">
             <li><a href="/pages/about.html">About us</a></li>
-            <li><a href="/pages/courses.html" class="active">Courses</a></li>
+            <li><a href="/pages/courses.html">Courses</a></li>
             <li><a href="/pages/teachers.html">Teachers</a></li>
-            <li><a href="/pages/enroll.html">Registration</a></li>
+            <li>
+              <a href="/pages/enroll.html" class="active">Registration</a>
+            </li>
             <li><a href="/pages/contacts.html">Contacts</a></li>
           </ul>
           <div class="burger closed">
@@ -70,24 +73,52 @@
     </header>
 
     <main>
-      <section class="section subjects">
+      <section class="section form">
         <div class="container">
-          <h2 class="section_title">All the courses</h2>
+          <h2 class="section_title">Contacts:</h2>
           <div class="wrapper">
-            <table id="table">
-              <tbody>
-                <tr>
-                  <th>Course</th>
-                  <th>Duration</th>
-                  <th>Monthly payment</th>
-                  <th>Tutor</th>
-                  <th>Time</th>
-                  <th>Days</th>
-                  <th>Places left</th>
-                  <th>Enroll</th>
-                </tr>
-              </tbody>
-            </table>
+            <form action="#" action="POST">
+              <label>
+                <div>Name:</div>
+                <input
+                  type="text"
+                  placeholder="Ivan Ivanov"
+                  name="name"
+                  id="name"
+                  required
+                  minlength="4"
+                />
+              </label>
+
+              <label>
+                <div>Phone number:</div>
+                <input
+                  type="tel"
+                  placeholder="+998 99 888 77 66"
+                  name="tel"
+                  id="tel"
+                  minlength="13"
+                  required
+                />
+              </label>
+
+              <label>
+                <div>Course you are interested in:</div>
+                <select name="course" id="course" required>
+                  <option value="Math">Math</option>
+                  <option value="English">English</option>
+                  <option value="SAT">SAT</option>
+                  <option value="Russian">Russian</option>
+                  <option value="Chemistry">Chemistry</option>
+                </select>
+              </label>
+
+              <div>
+                <button type="submit" class="section_btn">Enroll</button>
+              </div>
+            </form>
+
+            <div class="success_message_box"></div>
           </div>
         </div>
       </section>
@@ -182,8 +213,7 @@
         </p>
       </div>
     </footer>
-    <script src="/js/render-table.js"></script>
-    <script src="/js/check-places.js"></script>
     <script src="/js/menu-burger.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+form input,
+form select,
+form button {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-gray);
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  color: var(-gray);
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+.success {
+  color: rgb(30, 173, 30);
+}
+
+.success_title {
+  font-size: 1.5rem;
+}
+
+.success_title,
+.success_msg {
+  margin-bottom: 1rem;
+}
+
+.section.form {
+  display: flex;
+}
+
+.section.form .wrapper {
+  width: 400px;
+}
