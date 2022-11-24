@@ -1,3 +1,4 @@
+// Constant for an array of objects describing subjects
 const SUBJECTS = [
   [
     "Math",
@@ -67,16 +68,16 @@ const rowTemplate = `
     </td>
 </tr>
 `
-
+// elem in which rows will be injected
 const table = document.querySelector("table tbody")
 
+// applying renderRow for each subject
 SUBJECTS.forEach((subjectData) => {
   renderRow(table, rowTemplate, subjectData)
 })
 
 function renderRow(anchor, template, data) {
   // Replacing placeholders with actual data
-  console.log(data[1])
   let node = template
     .replace("course", data[0])
     .replace("duration", `${data[1][0]} ${data[1][1]}`)
