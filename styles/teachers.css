@@ -1,0 +1,39 @@
+.teachers_list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.teachers_list .card {
+  width: 100% !important;
+  flex: 0 0 auto !important;
+}
+
+.teachers_list .teacher_item {
+  width: 30%;
+}
+
+.teachers_list .card h3 {
+  text-align: center;
+}
+
+.teachers_list .card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media only screen and (max-width: 73.5rem) {
+  .teachers_list .teacher_item {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 65rem) {
+  .teachers_list .teacher_item {
+    width: 100%;
+  }
+}
