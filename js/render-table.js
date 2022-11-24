@@ -63,7 +63,7 @@ const rowTemplate = `
     <td>left</td>
     <td>
         <button class="section_btn">
-            <a href="/pages/enroll.html">Enroll</a>
+            <a href="/WT_CW1_00013789/pages/enroll.html">Enroll</a>
         </button>
     </td>
 </tr>
