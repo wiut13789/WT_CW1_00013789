@@ -2,22 +2,22 @@
 const SUBJECTS = [
   {
     title: "Math",
-    imgUrl: "../assets/images/math.jpeg",
+    imgUrl: "/WT_CW1_00013789/assets/images/math.jpeg",
     duration: 18,
   },
   {
     title: "English",
-    imgUrl: "../assets/images/english.jpeg",
+    imgUrl: "/WT_CW1_00013789/assets/images/english.jpeg",
     duration: 9,
   },
   {
     title: "SAT",
-    imgUrl: "../assets/images/sat.jpeg",
+    imgUrl: "/WT_CW1_00013789/assets/images/sat.jpeg",
     duration: 12,
   },
   {
     title: "Russian",
-    imgUrl: "../assets/images/russian.jpeg",
+    imgUrl: "/WT_CW1_00013789/assets/images/russian.jpeg",
     duration: 6,
   },
 ]
@@ -32,7 +32,7 @@ const cardTemplate = `
     </div>
     <div class="card_footer">
         <span><strong>Duration:</strong> DURATION months</span>
-        <button><a href="../pages/enroll.html">Enroll</a></button>
+        <button><a href="/WT_CW1_00013789/pages/enroll.html">Enroll</a></button>
     </div>
 </div>
 `
@@ -57,6 +57,7 @@ function renderCard(anchor, template, data) {
     .replace("HEADER", data.title)
     .replace("URL", data.imgUrl)
     .replace("DURATION", data.duration)
+    .replace("ALT", data.title + " " + "course")
   //calling isertAdjacentHTML method for injecting HTML into the DOM target elem
   anchor.insertAdjacentHTML("beforeend", node)
 }
