@@ -1,0 +1,79 @@
+.subjects .wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+
+.subjects .section_title {
+  margin-bottom: 1.5rem;
+}
+
+.subjects .card {
+  padding: 1rem;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.subjects .card:hover {
+  box-shadow: 0 0 15px 0 rgba(221, 221, 221, 0.505);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.subjects .card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.subjects .card span {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.subjects .card button {
+  display: block;
+  padding: 5px 10px;
+  border: 0;
+  background-color: var(--beige);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.subjects .card button:hover {
+  background-color: var(--dark-beige);
+}
+
+.subjects .card button:active {
+  background-color: var(--beige);
+}
+
+.subjects img {
+  object-fit: cover;
+}
+
+.subjects table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subjects table td,
+.subjects table th {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--dark-gray);
+  text-align: center;
+}
+
+.subjects table td button {
+  display: inline;
+}
+
+.subjects table td button:disabled {
+  user-select: none;
+  pointer-events: none;
+}
+
+.subjects table td button:disabled a {
+  color: #999;
+}

@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  --primary-gray: #757575;
+  --dark-gray: #454545;
+  --beige: #f6f3f3;
+  --dark-beige: #e1dfdf;
+  --black: #000;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  color: var(--primary-gray);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: var(--dark-gray);
+}
+
+.container {
+  max-width: 75rem;
+  margin: auto;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: var(--beige);
+}
+
+.header_bg {
+  position: absolute;
+  top: 7.5rem;
+  left: 0;
+  width: 100%;
+  height: 44rem;
+  z-index: -10;
+  background: url(../assets/images/thoughtful-students-talk.jpeg) 0 0 / cover;
+  filter: opacity(0.8);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_list {
+  display: flex;
+  align-items: center;
+  gap: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  list-style-type: none;
+}
+
+.navbar_list li {
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+.navbar_list li:hover a {
+  border-bottom: 2px solid #000;
+  cursor: pointer;
+}
+
+.logo {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.hero_section {
+  height: 44rem;
+  padding: 6.25rem 0;
+}
+
+.hero_section .wrapper {
+  width: 60%;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero_section_title {
+  margin-bottom: 1rem;
+  font-size: 3.75rem;
+  font-weight: 500;
+}
+
+.hero_section_text {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.hero_section_list {
+  padding-left: 1.5rem;
+  list-style-type: square;
+}
+
+.hero_section_list li {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 3rem 6.25em;
+}
+
+.section_title {
+  font-size: 2rem;
+}
+
+.footer {
+  background-color: var(--beige);
+}
+
+.section.footer {
+  padding-bottom: 1.5rem;
+}
+
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_navbar {
+  margin-bottom: 2rem;
+}
+
+.footer_navbar_list {
+  columns: 2;
+  width: 20rem;
+  list-style-position: inside;
+}
+
+.footer_navbar_list li {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0.5rem;
+  list-style-type: square;
+}
+
+.footer_navbar_list li a {
+  position: relative;
+  display: inline-block;
+  padding: 3px 0;
+}
+
+.footer_navbar_list li a::before {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background-color: var(--dark-gray);
+  transition: width 0.7s ease;
+  border-radius: 30px;
+}
+
+.footer_navbar_list li a:hover::before {
+  width: 100%;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.purpose {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.inner_section_title {
+  margin-bottom: 0.5rem;
+}
+
+.inner_section li {
+  list-style-type: none;
+  padding: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.inner_section.contacts,
+.inner_section.social_networks {
+  margin-bottom: 2rem;
+}
+
+.social_networks .inner_section_list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.section_btn {
+  display: block;
+  padding: 5px 10px;
+  border: 0;
+  background-color: var(--beige);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.section_btn:hover {
+  background-color: var(--dark-beige);
+}
+
+.section_btn:active {
+  background-color: var(--beige);
+}
+
+@media only screen and (max-width: 70rem) {
+  .footer .wrapper {
+    flex-direction: column;
+  }
+}
